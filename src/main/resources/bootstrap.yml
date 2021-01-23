@@ -5,4 +5,11 @@ spring:
     active: dev
   cloud:
     config:
-      uri: http://localhost:8888
+      discovery:
+        enabled: true
+        service-id: config-server-github
+#      uri: http://localhost:8881
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka

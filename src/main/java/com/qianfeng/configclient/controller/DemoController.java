@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     @Value("${foo}")
     private String foo;
-    @Value("${server.port}")
-    private String serverPort;
+//    @Value("${server.port}")
+//    private String serverPort;
+    @Value("${user.name}")
+    private String userName;
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello, foo = " + foo + ", server.port = " + serverPort;
+//        return "Hello, foo = " + foo + ", server.port = " + serverPort;
+        return "Hello " + userName + "! foo =" + foo;
     }
 }
